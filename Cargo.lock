@@ -916,6 +916,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "buzz-backend-docker"
+version = "0.1.0"
+dependencies = [
+ "nostr",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "buzz-cli"
 version = "0.1.0"
 dependencies = [

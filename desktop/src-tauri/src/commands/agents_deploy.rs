@@ -114,6 +114,9 @@ pub(super) fn deploy_payload_json(
     merged_env: std::collections::BTreeMap<String, String>,
 ) -> serde_json::Value {
     serde_json::json!({
+        // Stable identity lets providers reconcile their remote resource
+        // without deriving identity from a display name or request id.
+        "pubkey": &record.pubkey,
         "name": &record.name,
         "relay_url": relay_url,
         "private_key_nsec": &record.private_key_nsec,
